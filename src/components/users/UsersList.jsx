@@ -1,7 +1,9 @@
 import React from "react";
 import { Show } from "../../blocks/Show";
 
-export const UsersList = ({ users = [], extra, order }) => {
+export const UsersList = ({ users = [], extra, order, size = "md" }) => {
+  const sizeClass = size === "lg" ? "h-[38px] w-[38px]" : "h-[24px] w-[24px]";
+
   return (
     <div className="relative flex">
       {users.map((user, index) => {
@@ -18,16 +20,16 @@ export const UsersList = ({ users = [], extra, order }) => {
             <img
               src={user.imageUrl}
               alt={user.username}
-              className="h-[24px] w-[24px]"
+              className={sizeClass}
             />
           </div>
         );
       })}
       <Show iff={!!extra}>
         <div
-          className="relative h-[24px] w-[24px] bg-red-300 text-red-400 flex items-center justify-center gap-[2px] rounded-[50%] text-[15px] leading-[18px] font-[500] p-[1px]"
+          className={`relative bg-red-300 text-red-400 flex items-center justify-center gap-[2px] rounded-[50%] text-[15px] leading-[18px] font-[500] p-[1px] ${sizeClass}`}
           style={{
-            left: -18,
+            left: -36,
             zIndex: order === "reverse" ? 20 : 30,
           }}
         >

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   CategoryIcon,
-  LampIcon,
   MessageIcon,
   SettingIcon,
   TaskSquareIcon,
@@ -9,6 +8,7 @@ import {
 } from "../../assets";
 import { CiSquarePlus } from "react-icons/ci";
 import { BsThreeDots } from "react-icons/bs";
+import { Thought } from "./Thought";
 
 export const Sidebar = () => {
   const sidebarData = [
@@ -96,18 +96,7 @@ export const Sidebar = () => {
       </div>
       
       {/*  */}
-      <div className="bg-neutral-lightest h-[200px] w-[200px] relative">
-        <div className="h-[66px] w-[66px] bg-gray-300 absolute left-[65px] top-[-15%] rounded-[50%] flex flex-col justify-center items-center">
-          <div className="bg-yellow-400 absolute h-[33px] w-[33px] top-1 blur-lg">
-            {" "}
-          </div>
-          <img
-            src={LampIcon}
-            alt=""
-            className="h-[30px] w-[30px] relative z-[10]"
-          />
-        </div>
-      </div>
+      <Thought />
     </div>
   );
 };

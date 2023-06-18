@@ -11,7 +11,6 @@ const Dashboard = () => {
         <Sidebar />
         <div className="flex flex-col gap-[10px] p-2 grow">
           <ProjectDescription />
-
           <Columns />
         </div>
       </div>
